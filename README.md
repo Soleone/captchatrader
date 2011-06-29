@@ -1,7 +1,7 @@
 captchatrader
-===========
+=============
 
-FIXME (describe your package)
+capturetrader API Ruby bindings for submitting captures
 
 Features
 --------
@@ -21,24 +21,14 @@ Requirements
 Install
 -------
 
-* FIXME (sudo gem install, anything else)
-
-Author
-------
-
-Original author: FIXME (author's name)
-
-Contributors:
-
-* FIXME (contributor 1?)
-* FIXME (contributor 2?)
+* gem install capturetrader
 
 License
 -------
 
-(The MIT License) FIXME (different license?)
+The MIT License
 
-Copyright (c) 2011 FIXME (author's name)
+Copyright (c) 2011 Soleone
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
