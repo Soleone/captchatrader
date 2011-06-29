@@ -1,7 +1,7 @@
 captchatrader
 =============
 
-Ruby bindings for the captchatrader.com API. Submit captcha images and retrieve the text in a string.
+Ruby bindings for the captchatrader.com API. Submit captcha images and retrieve the text as a string.
 
 
 Features
