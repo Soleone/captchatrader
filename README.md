@@ -1,34 +1,49 @@
 captchatrader
 =============
 
-capturetrader API Ruby bindings for submitting captures
+Ruby bindings for the captchatrader.com API. Submit captcha images and retrieve the text in a string.
+
 
 Features
 --------
 
-* FIXME (list of features and unsolved problems)
+* Submit capture images and retrieve the text
+* Notify server if text is correct to prevent charging credits on incorrectly detected captchas
+* Retrieve amount of credits left
 
-Examples
+Usage
 --------
 
-    FIXME (code sample of usage)
+    Captchatrader::API.username = "your-username"
+    Captchatrader::API.password = "your-password-or-passkey"
+    Captchatrader::API.api_key  = "your-applications-api-key"
 
-Requirements
-------------
-
-* FIXME (list of requirements)
+    # Submit a capture image to retrieve the text
+    captcha = Captchatrader::API.submit("http://example.com/link-to-image.jpg", :url)
+    puts captcha.value  # => "capture text"
+  
+    # Tell the server that this captcha has been detected incorrectly (prevent charging credits)
+    Captchatrader::API.respond(captcha.ticket, false)  # true
+  
+    # Credits left for this username
+    Captchatrader::API.credits  # => 90
 
 Install
 -------
 
-* gem install capturetrader
+    gem install capturetrader
+  
+Requirements
+------------
+
+* None (only Mocha for running tests)
 
 License
 -------
 
 The MIT License
 
-Copyright (c) 2011 Soleone
+Copyright (c) 2011 Dennis Theisen
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
